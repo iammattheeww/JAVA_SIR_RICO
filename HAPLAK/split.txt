@@ -1,0 +1,34 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        // String x="Hello";
+        // String y="World";
+        // System.out.println("The value of x is " + x + " " + "and the value of y is "+ y);
+        
+        // String x="Hello";
+        // String y="World";
+        // String z=x.concat(" " + y);
+        // System.out.println(z);
+        
+        // String x="Hello";
+        // String y="World";
+        // String foo=x.substring(2,4);
+        // String z=foo.concat(y);
+        // System.out.println(foo);
+        // System.out.println(z);
+        
+        String myString="the quick brown fox";
+        String toGet[]= myString.split(" ");
+        for(String x:toGet){
+            System.out.println(x);
+        }
+        
+        String myString="the quick brown fox";
+        String toGet[]= myString.split("brown");
+        for(String x:toGet){
+            System.out.println(x);
+        }
+    }
+}
