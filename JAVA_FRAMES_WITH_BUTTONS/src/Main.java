@@ -221,67 +221,67 @@ import java.awt.event.ActionListener;
 //import java.awt.event.ActionEvent;
 //import java.awt.event.ActionListener;
 //
-public class Main {
-    public static void main(String[] args) {
-        // 1. Initialize master frame window container.
-        // Simple terms: Creates the empty container window.
-        Frame frame = new Frame("Multi-Button App");
-
-        // 2. Instantiate primary execution button component.
-        // Simple terms: Creates a button labeled "Save".
-        Button btn1 = new Button("Save");
-
-        // 3. Instantiate secondary execution button component.
-        // Simple terms: Creates a button labeled "Delete".
-        Button btn2 = new Button("Delete");
-
-        // 4. Create feedback notification label.
-        // Simple terms: A text area showing the current operation status.
-        Label statusLabel = new Label("Status: Ready");
-
-        // 5. Apply layout bound dimensions to buttons and label.
-        // Simple terms: Manually sets pixel layout positioning coordinates.
-        btn1.setBounds(100, 100, 100, 50);
-        btn2.setBounds(220, 100, 100, 50);
-        statusLabel.setBounds(100, 200, 200, 30);
-
-        // 6. Build a shared action listener utility utilizing e.getSource() differentiation logic.
-        // Simple terms: One centralized listener that checks which button fired the click event.
-        ActionListener commonListener = new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // 7. Isolate exact triggering object component reference using e.getSource().
-                // Simple terms: Asks the event object "Who sent this click signal?".
-                Object clickedButton = e.getSource();
-
-                // 8. Conditional branch evaluation matching source references.
-                // Simple terms: Checks if it came from btn1 or btn2 to change status text accordingly.
-                if (clickedButton == btn1) {
-                    statusLabel.setText("Data Saved!");
-                } else if (clickedButton == btn2) {
-                    statusLabel.setText("Data Deleted!");
-                }
-            }
-        };
-
-        // 9. Register the shared listener handler to both buttons.
-        // Simple terms: Connects both interactive buttons to our multi-target listener function.
-        btn1.addActionListener(commonListener);
-        btn2.addActionListener(commonListener);
-
-        // 10. Add all UI elements into frame container layout.
-        // Simple terms: Places buttons and status label onto the visible screen window.
-        frame.add(btn1);
-        frame.add(btn2);
-        frame.add(statusLabel);
-
-        // 11. Finalize application window sizing, layout clearing, and visibility activation.
-        // Simple terms: Sets window boundaries, removes automatic layout manager, and displays the UI.
-        frame.setSize(500, 400);
-        frame.setLayout(null);
-        frame.setVisible(true);
-    }
-}
+//public class Main {
+//    public static void main(String[] args) {
+//        // 1. Initialize master frame window container.
+//        // Simple terms: Creates the empty container window.
+//        Frame frame = new Frame("Multi-Button App");
+//
+//        // 2. Instantiate primary execution button component.
+//        // Simple terms: Creates a button labeled "Save".
+//        Button btn1 = new Button("Save");
+//
+//        // 3. Instantiate secondary execution button component.
+//        // Simple terms: Creates a button labeled "Delete".
+//        Button btn2 = new Button("Delete");
+//
+//        // 4. Create feedback notification label.
+//        // Simple terms: A text area showing the current operation status.
+//        Label statusLabel = new Label("Status: Ready");
+//
+//        // 5. Apply layout bound dimensions to buttons and label.
+//        // Simple terms: Manually sets pixel layout positioning coordinates.
+//        btn1.setBounds(100, 100, 100, 50);
+//        btn2.setBounds(220, 100, 100, 50);
+//        statusLabel.setBounds(100, 200, 200, 30);
+//
+//        // 6. Build a shared action listener utility utilizing e.getSource() differentiation logic.
+//        // Simple terms: One centralized listener that checks which button fired the click event.
+//        ActionListener commonListener = new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                // 7. Isolate exact triggering object component reference using e.getSource().
+//                // Simple terms: Asks the event object "Who sent this click signal?".
+//                Object clickedButton = e.getSource();
+//
+//                // 8. Conditional branch evaluation matching source references.
+//                // Simple terms: Checks if it came from btn1 or btn2 to change status text accordingly.
+//                if (clickedButton == btn1) {
+//                    statusLabel.setText("Data Saved!");
+//                } else if (clickedButton == btn2) {
+//                    statusLabel.setText("Data Deleted!");
+//                }
+//            }
+//        };
+//
+//        // 9. Register the shared listener handler to both buttons.
+//        // Simple terms: Connects both interactive buttons to our multi-target listener function.
+//        btn1.addActionListener(commonListener);
+//        btn2.addActionListener(commonListener);
+//
+//        // 10. Add all UI elements into frame container layout.
+//        // Simple terms: Places buttons and status label onto the visible screen window.
+//        frame.add(btn1);
+//        frame.add(btn2);
+//        frame.add(statusLabel);
+//
+//        // 11. Finalize application window sizing, layout clearing, and visibility activation.
+//        // Simple terms: Sets window boundaries, removes automatic layout manager, and displays the UI.
+//        frame.setSize(500, 400);
+//        frame.setLayout(null);
+//        frame.setVisible(true);
+//    }
+//}
 
 
 // ---------------------------------------------------------------------
@@ -365,67 +365,67 @@ public class Main {
 //import java.awt.event.ActionEvent;
 //import java.awt.event.ActionListener;
 //
-//public class Main {
-//    public static void main(String[] args) {
-//        // 1. Initialize login frame container window.
-//        // Simple terms: Creates the login screen boundary container.
-//        Frame frame = new Frame("Login Screen");
-//
-//        // 2. Instantiate text field components for credentials entry.
-//        // Simple terms: Input boxes for typing usernames and passwords.
-//        TextField userField = new TextField();
-//        TextField passField = new TextField();
-//
-//        // 3. Configure password text mask character property.
-//        // Simple terms: Hides typed password letters behind asterisk symbols (*).
-//        passField.setEchoChar('*');
-//
-//        // 4. Create login submission button and validation status label.
-//        // Simple terms: Button to submit login credentials and a label for success/error text.
-//        Button loginBtn = new Button("Login");
-//        Label msgLabel = new Label("");
-//
-//        // 5. Establish layout coordinate bounds for inputs, buttons, and message labels.
-//        // Simple terms: Sets exact placement pixels for clean form layout alignment.
-//        userField.setBounds(150, 100, 150, 25);
-//        passField.setBounds(150, 140, 150, 25);
-//        loginBtn.setBounds(150, 180, 80, 30);
-//        msgLabel.setBounds(150, 230, 200, 25);
-//
-//        // 6. Add action listener callback execution for credential evaluation.
-//        // Simple terms: Listens for login button clicks to verify matching username and password values.
-//        loginBtn.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                // 7. Retrieve text strings entered into input fields.
-//                // Simple terms: Grabs whatever text the user typed into the user and password boxes.
-//                String username = userField.getText();
-//                String password = passField.getText();
-//
-//                // 8. Execute logical condition check matching hardcoded authorized credentials.
-//                // Simple terms: Checks if username is "admin" and password is "1234".
-//                if (username.equals("admin") && password.equals("1234")) {
-//                    msgLabel.setText("Login Successful!");
-//                } else {
-//                    msgLabel.setText("Invalid Credentials!");
-//                }
-//            }
-//        });
-//
-//        // 9. Append static descriptor labels, input elements, buttons, and feedback indicators to frame container.
-//        // Simple terms: Adds title labels ("Username:", "Password:"), input fields, and buttons to the window.
-//        frame.add(new Label("Username:") {{ setBounds(50, 100, 90, 25); }});
-//        frame.add(new Label("Password:") {{ setBounds(50, 140, 90, 25); }});
-//        frame.add(userField);
-//        frame.add(passField);
-//        frame.add(loginBtn);
-//        frame.add(msgLabel);
-//
-//        // 10. Complete window dimension configuration and render visibility properties.
-//        // Simple terms: Sets final window size dimensions and displays the application interface.
-//        frame.setSize(400, 350);
-//        frame.setLayout(null);
-//        frame.setVisible(true);
-//    }
-//}
+public class Main {
+    public static void main(String[] args) {
+        // 1. Initialize login frame container window.
+        // Simple terms: Creates the login screen boundary container.
+        Frame frame = new Frame("Login Screen");
+
+        // 2. Instantiate text field components for credentials entry.
+        // Simple terms: Input boxes for typing usernames and passwords.
+        TextField userField = new TextField();
+        TextField passField = new TextField();
+
+        // 3. Configure password text mask character property.
+        // Simple terms: Hides typed password letters behind asterisk symbols (*).
+        passField.setEchoChar('*');
+
+        // 4. Create login submission button and validation status label.
+        // Simple terms: Button to submit login credentials and a label for success/error text.
+        Button loginBtn = new Button("Login");
+        Label msgLabel = new Label("");
+
+        // 5. Establish layout coordinate bounds for inputs, buttons, and message labels.
+        // Simple terms: Sets exact placement pixels for clean form layout alignment.
+        userField.setBounds(150, 100, 150, 25);
+        passField.setBounds(150, 140, 150, 25);
+        loginBtn.setBounds(150, 180, 80, 30);
+        msgLabel.setBounds(150, 230, 200, 25);
+
+        // 6. Add action listener callback execution for credential evaluation.
+        // Simple terms: Listens for login button clicks to verify matching username and password values.
+        loginBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // 7. Retrieve text strings entered into input fields.
+                // Simple terms: Grabs whatever text the user typed into the user and password boxes.
+                String username = userField.getText();
+                String password = passField.getText();
+
+                // 8. Execute logical condition check matching hardcoded authorized credentials.
+                // Simple terms: Checks if username is "admin" and password is "1234".
+                if (username.equals("admin") && password.equals("1234")) {
+                    msgLabel.setText("Login Successful!");
+                } else {
+                    msgLabel.setText("Invalid Credentials!");
+                }
+            }
+        });
+
+        // 9. Append static descriptor labels, input elements, buttons, and feedback indicators to frame container.
+        // Simple terms: Adds title labels ("Username:", "Password:"), input fields, and buttons to the window.
+        frame.add(new Label("Username:") {{ setBounds(50, 100, 90, 25); }});
+        frame.add(new Label("Password:") {{ setBounds(50, 140, 90, 25); }});
+        frame.add(userField);
+        frame.add(passField);
+        frame.add(loginBtn);
+        frame.add(msgLabel);
+
+        // 10. Complete window dimension configuration and render visibility properties.
+        // Simple terms: Sets final window size dimensions and displays the application interface.
+        frame.setSize(400, 350);
+        frame.setLayout(null);
+        frame.setVisible(true);
+    }
+}
 // =====================================================================
