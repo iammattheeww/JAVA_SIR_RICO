@@ -112,81 +112,81 @@ import java.awt.event.ActionListener;
 //    }
 //}
 
-public class Main {
-    public static void main(String[] args){
-        // 1. Create the main window frame container.
-        // Simple terms: This is the outer application window border where all visual elements will sit.
-        Frame myFrame = new Frame();
-
-        // 2. Create a text field input component.
-        // Simple terms: An interactive text box where the user can type custom strings/characters.
-        TextField textfield = new TextField();
-
-        // 3. Set text field bounds (x, y, width, height).
-        // Simple terms: Defines where the input box is placed horizontally/vertically and how big it appears.
-        textfield.setBounds(100, 400, 200, 25);
-
-        // 4. Create a label display component with initial fallback text.
-        // Simple terms: A static text display element used to show messages on screen.
-        Label label = new Label("Hello World!");
-
-        // 5. Set label placement bounds.
-        // Simple terms: Places the label component at coordinates (800, 200) with a size of 100x100 pixels.
-        label.setBounds(800, 200, 100, 100);
-
-        // 6. Create main functional click button and execution exit button components.
-        // Simple terms: Actionable buttons that wait for mouse interaction.
-        Button button = new Button("Click");
-        Button button_exit = new Button("Exit");
-
-        // 7. Set layout bounds mapping for both buttons.
-        // Simple terms: Assigns exact pixel coordinates and dimensions so they render in correct places.
-        button.setBounds(100, 100, 100, 100);
-        button_exit.setBounds(100, 500, 100, 25);
-
-        // 8. Add an action listener handler object to the main click button component.
-        // Simple terms: Listens specifically for user clicks on the "Click" button.
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // 9. Extract current string value from the text field and assign it to label text.
-                // Simple terms: Grabs whatever text the user typed in the box and copies it onto the label display.
-                String x = textfield.getText();
-                label.setText(x);
-            }
-        });
-
-        // 10. Add action listener callback to the exit button to handle closing mechanics.
-        // Simple terms: Listens for clicks on the "Exit" button to shut down the application window.
-        button_exit.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // 11. Destroy and close down the window frame safely via memory disposal.
-                // Simple terms: Closes the application completely when the exit button is clicked.
-                myFrame.dispose();
-            }
-        });
-
-        // 12. Register all individual visual UI components into the master frame container.
-        // Simple terms: Attaches the text box, label, and buttons to the window so they actually appear.
-        myFrame.add(textfield);
-        myFrame.add(label);
-        myFrame.add(button);
-        myFrame.add(button_exit);
-
-        // 13. Set master window screen layout resolution dimensions.
-        // Simple terms: Makes the main application window 1024 pixels wide by 768 pixels high.
-        myFrame.setSize(1024, 768);
-
-        // 14. Clear layout manager configuration to enable absolute manual coordinate positioning.
-        // Simple terms: Disables automatic component arranging so our custom setBounds rules work properly.
-        myFrame.setLayout(null);
-
-        // 15. Change window property to visible state representation.
-        // Simple terms: Renders and opens the graphical window on the computer screen.
-        myFrame.setVisible(true);
-    }
-}
+//public class Main {
+//    public static void main(String[] args){
+//        // 1. Create the main window frame container.
+//        // Simple terms: This is the outer application window border where all visual elements will sit.
+//        Frame myFrame = new Frame();
+//
+//        // 2. Create a text field input component.
+//        // Simple terms: An interactive text box where the user can type custom strings/characters.
+//        TextField textfield = new TextField();
+//
+//        // 3. Set text field bounds (x, y, width, height).
+//        // Simple terms: Defines where the input box is placed horizontally/vertically and how big it appears.
+//        textfield.setBounds(100, 400, 200, 25);
+//
+//        // 4. Create a label display component with initial fallback text.
+//        // Simple terms: A static text display element used to show messages on screen.
+//        Label label = new Label("Hello World!");
+//
+//        // 5. Set label placement bounds.
+//        // Simple terms: Places the label component at coordinates (800, 200) with a size of 100x100 pixels.
+//        label.setBounds(800, 200, 100, 100);
+//
+//        // 6. Create main functional click button and execution exit button components.
+//        // Simple terms: Actionable buttons that wait for mouse interaction.
+//        Button button = new Button("Click");
+//        Button button_exit = new Button("Exit");
+//
+//        // 7. Set layout bounds mapping for both buttons.
+//        // Simple terms: Assigns exact pixel coordinates and dimensions so they render in correct places.
+//        button.setBounds(100, 100, 100, 100);
+//        button_exit.setBounds(100, 500, 100, 25);
+//
+//        // 8. Add an action listener handler object to the main click button component.
+//        // Simple terms: Listens specifically for user clicks on the "Click" button.
+//        button.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                // 9. Extract current string value from the text field and assign it to label text.
+//                // Simple terms: Grabs whatever text the user typed in the box and copies it onto the label display.
+//                String x = textfield.getText();
+//                label.setText(x);
+//            }
+//        });
+//
+//        // 10. Add action listener callback to the exit button to handle closing mechanics.
+//        // Simple terms: Listens for clicks on the "Exit" button to shut down the application window.
+//        button_exit.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                // 11. Destroy and close down the window frame safely via memory disposal.
+//                // Simple terms: Closes the application completely when the exit button is clicked.
+//                myFrame.dispose();
+//            }
+//        });
+//
+//        // 12. Register all individual visual UI components into the master frame container.
+//        // Simple terms: Attaches the text box, label, and buttons to the window so they actually appear.
+//        myFrame.add(textfield);
+//        myFrame.add(label);
+//        myFrame.add(button);
+//        myFrame.add(button_exit);
+//
+//        // 13. Set master window screen layout resolution dimensions.
+//        // Simple terms: Makes the main application window 1024 pixels wide by 768 pixels high.
+//        myFrame.setSize(1024, 768);
+//
+//        // 14. Clear layout manager configuration to enable absolute manual coordinate positioning.
+//        // Simple terms: Disables automatic component arranging so our custom setBounds rules work properly.
+//        myFrame.setLayout(null);
+//
+//        // 15. Change window property to visible state representation.
+//        // Simple terms: Renders and opens the graphical window on the computer screen.
+//        myFrame.setVisible(true);
+//    }
+//}
 
 // =====================================================================
 // =====================================================================
@@ -221,67 +221,67 @@ public class Main {
 //import java.awt.event.ActionEvent;
 //import java.awt.event.ActionListener;
 //
-//public class MultiButtonExample {
-//    public static void main(String[] args) {
-//        // 1. Initialize master frame window container.
-//        // Simple terms: Creates the empty container window.
-//        Frame frame = new Frame("Multi-Button App");
-//
-//        // 2. Instantiate primary execution button component.
-//        // Simple terms: Creates a button labeled "Save".
-//        Button btn1 = new Button("Save");
-//
-//        // 3. Instantiate secondary execution button component.
-//        // Simple terms: Creates a button labeled "Delete".
-//        Button btn2 = new Button("Delete");
-//
-//        // 4. Create feedback notification label.
-//        // Simple terms: A text area showing the current operation status.
-//        Label statusLabel = new Label("Status: Ready");
-//
-//        // 5. Apply layout bound dimensions to buttons and label.
-//        // Simple terms: Manually sets pixel layout positioning coordinates.
-//        btn1.setBounds(100, 100, 100, 50);
-//        btn2.setBounds(220, 100, 100, 50);
-//        statusLabel.setBounds(100, 200, 200, 30);
-//
-//        // 6. Build a shared action listener utility utilizing e.getSource() differentiation logic.
-//        // Simple terms: One centralized listener that checks which button fired the click event.
-//        ActionListener commonListener = new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                // 7. Isolate exact triggering object component reference using e.getSource().
-//                // Simple terms: Asks the event object "Who sent this click signal?".
-//                Object clickedButton = e.getSource();
-//
-//                // 8. Conditional branch evaluation matching source references.
-//                // Simple terms: Checks if it came from btn1 or btn2 to change status text accordingly.
-//                if (clickedButton == btn1) {
-//                    statusLabel.setText("Data Saved!");
-//                } else if (clickedButton == btn2) {
-//                    statusLabel.setText("Data Deleted!");
-//                }
-//            }
-//        };
-//
-//        // 9. Register the shared listener handler to both buttons.
-//        // Simple terms: Connects both interactive buttons to our multi-target listener function.
-//        btn1.addActionListener(commonListener);
-//        btn2.addActionListener(commonListener);
-//
-//        // 10. Add all UI elements into frame container layout.
-//        // Simple terms: Places buttons and status label onto the visible screen window.
-//        frame.add(btn1);
-//        frame.add(btn2);
-//        frame.add(statusLabel);
-//
-//        // 11. Finalize application window sizing, layout clearing, and visibility activation.
-//        // Simple terms: Sets window boundaries, removes automatic layout manager, and displays the UI.
-//        frame.setSize(500, 400);
-//        frame.setLayout(null);
-//        frame.setVisible(true);
-//    }
-//}
+public class Main {
+    public static void main(String[] args) {
+        // 1. Initialize master frame window container.
+        // Simple terms: Creates the empty container window.
+        Frame frame = new Frame("Multi-Button App");
+
+        // 2. Instantiate primary execution button component.
+        // Simple terms: Creates a button labeled "Save".
+        Button btn1 = new Button("Save");
+
+        // 3. Instantiate secondary execution button component.
+        // Simple terms: Creates a button labeled "Delete".
+        Button btn2 = new Button("Delete");
+
+        // 4. Create feedback notification label.
+        // Simple terms: A text area showing the current operation status.
+        Label statusLabel = new Label("Status: Ready");
+
+        // 5. Apply layout bound dimensions to buttons and label.
+        // Simple terms: Manually sets pixel layout positioning coordinates.
+        btn1.setBounds(100, 100, 100, 50);
+        btn2.setBounds(220, 100, 100, 50);
+        statusLabel.setBounds(100, 200, 200, 30);
+
+        // 6. Build a shared action listener utility utilizing e.getSource() differentiation logic.
+        // Simple terms: One centralized listener that checks which button fired the click event.
+        ActionListener commonListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // 7. Isolate exact triggering object component reference using e.getSource().
+                // Simple terms: Asks the event object "Who sent this click signal?".
+                Object clickedButton = e.getSource();
+
+                // 8. Conditional branch evaluation matching source references.
+                // Simple terms: Checks if it came from btn1 or btn2 to change status text accordingly.
+                if (clickedButton == btn1) {
+                    statusLabel.setText("Data Saved!");
+                } else if (clickedButton == btn2) {
+                    statusLabel.setText("Data Deleted!");
+                }
+            }
+        };
+
+        // 9. Register the shared listener handler to both buttons.
+        // Simple terms: Connects both interactive buttons to our multi-target listener function.
+        btn1.addActionListener(commonListener);
+        btn2.addActionListener(commonListener);
+
+        // 10. Add all UI elements into frame container layout.
+        // Simple terms: Places buttons and status label onto the visible screen window.
+        frame.add(btn1);
+        frame.add(btn2);
+        frame.add(statusLabel);
+
+        // 11. Finalize application window sizing, layout clearing, and visibility activation.
+        // Simple terms: Sets window boundaries, removes automatic layout manager, and displays the UI.
+        frame.setSize(500, 400);
+        frame.setLayout(null);
+        frame.setVisible(true);
+    }
+}
 
 
 // ---------------------------------------------------------------------
@@ -292,7 +292,7 @@ public class Main {
 //import java.awt.event.ActionEvent;
 //import java.awt.event.ActionListener;
 //
-//public class SimpleCalculatorExample {
+//public class Main {
 //    public static void main(String[] args) {
 //        // 1. Initialize main calculation window container frame.
 //        // Simple terms: Creates the application frame border.
@@ -365,7 +365,7 @@ public class Main {
 //import java.awt.event.ActionEvent;
 //import java.awt.event.ActionListener;
 //
-//public class LoginFormExample {
+//public class Main {
 //    public static void main(String[] args) {
 //        // 1. Initialize login frame container window.
 //        // Simple terms: Creates the login screen boundary container.
