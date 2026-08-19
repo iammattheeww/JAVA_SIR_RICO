@@ -1,5 +1,6 @@
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.Map;
 import java.util.TreeMap;
 //import java.util.List;
 //import java.util.ArrayList;
@@ -21,6 +22,8 @@ import java.util.TreeMap;
 public class Main{
     public static void main(String[] xyz){
         TreeMap <Integer, String> myList = new TreeMap <Integer, String>();
+        // OR
+        // Map <Integer, String> myList = new TreeMap <Integer, String>();
         myList.put(123, "a");
         myList.put(456, "b");
         myList.put(789, "c");
