@@ -5,7 +5,9 @@ import java.util.HashMap;
 
 public class Main {
     public static void main(String[] xyz){
-        Map<String, Integer> items = new HashMap<>();
+        HashMap<String, Integer> items = new HashMap<>();
+        // OR
+        // Map<String, Integer> items = new HashMap<>();
         items.put("A ", 10);
         items.put("B ", 20);
         items.put("C ", 30);
