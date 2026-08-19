@@ -18,5 +18,10 @@ public class Main {
         for (Map.Entry<String, Integer> entry : items.entrySet()){
             System.out.println("Item: " + entry.getKey() + "Count: " + entry.getValue());
         }
+
+        // OR
+        // for (HashMap.Entry<String, Integer> entry : items.entrySet()){ // Map.Entry can also be written as HashMap.Entry, since Map is just the general interface.
+            // System.out.println("Item: " + entry.getKey() + "Count: " + entry.getValue());
+        // }
     }
 }
