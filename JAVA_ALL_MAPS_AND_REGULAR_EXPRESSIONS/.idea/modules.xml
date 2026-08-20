@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/JAVA_ALL_MAPS_AND_REGULAR_EXPRESSIONS.iml" filepath="$PROJECT_DIR$/JAVA_ALL_MAPS_AND_REGULAR_EXPRESSIONS.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/JAVA_ALL_MAPS_AND_REGULAR_EXPRESSIONS.iml" filepath="$PROJECT_DIR$/.idea/JAVA_ALL_MAPS_AND_REGULAR_EXPRESSIONS.iml" />
+>>>>>>> 69a36f37e8bedf1470bd4f8bf274bd1bcf77bab1
     </modules>
   </component>
 </project>
